@@ -1,1 +1,29 @@
+# Lab Notes — Enterprise Lab (pfSense + Windows Server)
+
+## 1. Environment Summary
+- Hyper-V-based lab
+- pfSense as router/firewall
+- Windows Server 2019/2022 for AD DS, DNS, and DHCP
+- Segmented subnets: 192.168.1.0/24 and 192.168.2.0/24
+
+## 2. Key Observations
+- DHCP failover (Load Balance 50/50) works consistently
+- DNS forwarders to Cloudflare improve external resolution speed
+- Cross-subnet routing is stable via pfSense
+
+## 3. Troubleshooting Notes
+- If clients don’t get a DHCP lease → check firewall rules
+- If DNS fails → verify forwarders on SRV-DC01
+- If pfSense WAN unreachable → check main router DHCP/static mapping
+
+## 4. Future Improvements (Phase-2)
+- Add VLANs for ACC/MGT/Admin/HR
+- Add firewall segmentation rules
+- Add monitoring (Zabbix/PRTG)
+
+## 5. Validation Checklist
+- Domain reachable: `ping mylab.test`
+- DNS resolution works
+- DHCP failover healthy
+- Cross-subnet connectivity OK
 
