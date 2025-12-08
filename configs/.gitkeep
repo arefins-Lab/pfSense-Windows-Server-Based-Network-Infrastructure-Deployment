@@ -1,2 +1,18 @@
-pfSense-interface-and-firewall-notes.md 
-➡️ Contains interface IPs, NAT, DNS, firewall rules
+/docs
+    architecture-and-ip-plan.md
+    runbook-phase-1.md
+
+/configs
+    pfSense-interface-and-firewall-notes.md
+    pfsense-config.xml   ← (pfSense theke export kore ekhane upload korba)
+
+/scripts
+    Install-ADDS-Forest.ps1
+    Set-DNS-Forwarders.ps1
+    Create-DHCP-Scopes.ps1
+    Configure-DHCP-Failover.ps1
+    Create-AD-OU-Structure.ps1
+    Validate-Connectivity.ps1
+
+/diagrams
+    EnterpriseLabDiagram.png
